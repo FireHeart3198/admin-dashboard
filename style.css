@@ -21,7 +21,7 @@ html {
     gap: 100px;
     grid-template-areas: "branding" "nav";
 }
- .nav {
+nav {
     grid-area: nav;
     display: grid;
     grid-template-rows: 1fr 2fr;
@@ -37,12 +37,12 @@ html {
  grid-area: settings;
 }
 
-.header {
+header {
     grid-area: header;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
-.main-content {
+main {
     grid-area: main;
 }
