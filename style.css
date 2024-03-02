@@ -6,13 +6,33 @@ html {
 }
 
 .container {
+    height: 100vh;
+    width: 100vw;
     display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
     grid-template-areas: "sidebar header"
                 "sidebar main";
 }
 
 .sidebar {
     grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "branding" "nav";
+}
+ .nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "pg" "settings";
+ }
+
+ .page-nav {
+    grid-area: pg;
+ }
+
+.settings-nav {
+ grid-area: settings;
 }
 
 .header {
