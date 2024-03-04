@@ -9,7 +9,7 @@ html {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-template: 1fr 5fr / 1fr 4fr;
     grid-template-areas: "sidebar header"
                 "sidebar main";
 }
@@ -18,16 +18,19 @@ html {
     grid-area: sidebar;
     display: grid;
     grid-template-rows: 1fr 12fr;
-    gap: 100px;
     grid-template-areas: "branding" "nav";
 }
 nav {
     grid-area: nav;
     display: grid;
     grid-template-rows: 1fr 2fr;
-    gap: 100px;
     grid-template-areas: "pg" "settings";
  }
+
+ .sidebar,
+    nav {
+        gap: 45px;
+    }
 
  .page-nav {
     grid-area: pg;
@@ -40,7 +43,36 @@ nav {
 header {
     grid-area: header;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 3fr;
+    align-items: center;
+}
+
+header .top {
+    display: grid;
+    grid-template-columns: 11fr 1fr 1fr 2fr;
+}
+
+header .bottom {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.bottom .profile {
+    display: grid;
+    grid-template-areas: "pic intro"
+                        "pic name";
+}
+
+.bottom .profile-pic {
+    grid-area: pic;
+}
+
+.bottom .intro {
+    grid-area: intro;
+}
+
+.bottom .name {
+    grid-area: name;
 }
 
 main {
