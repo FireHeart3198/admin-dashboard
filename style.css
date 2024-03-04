@@ -5,6 +5,8 @@ html {
     box-sizing: inherit;
 }
 
+/* Make sure everything doesn't break at high zooms */
+
 .container {
     height: 100vh;
     width: 100vw;
@@ -77,4 +79,16 @@ header .bottom {
 
 main {
     grid-area: main;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+main .projects {
+    display: grid;
+    grid-template-rows: 1fr 13fr;
+}
+
+main .notices {
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr 6fr;
 }
