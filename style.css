@@ -29,6 +29,16 @@ nav {
     grid-template-areas: "pg" "settings";
  }
 
+ .branding {
+    display: flex;
+    align-items: center;
+ }
+
+ .branding img {
+    width: 70px;
+    height: auto;
+ }
+
  .sidebar,
     nav {
         gap: 45px;
