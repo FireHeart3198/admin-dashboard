@@ -122,6 +122,11 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
     display: none; 
 }
 
+header .top .profile-pic {
+    height: 50px;
+    width: auto;
+}
+
 header .bottom {
     display: grid;
     grid-template-columns: 3fr 2fr;
