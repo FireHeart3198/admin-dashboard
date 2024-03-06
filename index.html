@@ -9,7 +9,7 @@
         <div class="container">
             <div class="sidebar">
                 <div class="branding">
-                    <img src="images/view-dashboard.svg" alt="The dasboard logo with two columns of stacked rectangles with differing heights" height="70px" width="70px">
+                    <img src="images/view-dashboard.svg" alt="The dashboard logo with two columns of stacked rectangles with differing heights" height="70px" width="70px">
                     <div>Dashboard</div>
                 </div>
                 <nav>
@@ -36,13 +36,14 @@
                 <div class="top">
                     <search>
                         <form>
-                            <label><i></i></label>
-                            <input>
+                            <label for="search"><img src="images/magnify.svg" height="22px" width="22px"></label>
+                                <!-- accessibility concerns when having the label like this, look for fix -->
+                            <input type="search" id="search" name="search">
                         </form>
                     </search>
-                    <i class="bell"></i>
-                    <i class="profile-pic"></i>
-                    <div class="name"></div>
+                    <img class="bell" src="images/bell-ring-outline.svg" height="22px" width="22px">
+                    <img class="profile-pic">
+                    <div class="name">Mayday Worcestershire</div>
                 </div>
                 <div class="bottom">
                     <div class="profile">
