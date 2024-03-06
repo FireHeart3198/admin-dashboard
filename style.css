@@ -13,6 +13,7 @@ html {
 
 body {
     margin: 0;
+    font-family:'Roboto','Times New Roman', Times, serif;
 }
 
 ul {
@@ -69,7 +70,6 @@ nav {
         gap: 45px;
         font-size: 1.5rem;
         font-weight: 400;
-        font-family:'Roboto','Times New Roman', Times, serif;
     }
 
  .page-nav {
@@ -122,32 +122,47 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
     display: none; 
 }
 
-header .top .profile-pic {
+.top .profile-pic {
     height: 50px;
     width: auto;
 }
 
+.name {
+    font-family:'Lora', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+/* make sure name doesn't wrap (max content?) */
+
 header .bottom {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
 }
 
 .bottom .profile {
-    display: grid;
-    grid-template-areas: "pic intro"
-                        "pic name";
+    display: flex;
+    flex-direction: column;
 }
 
 .bottom .profile-pic {
-    grid-area: pic;
+    height: 90px;
+    width: auto;
 }
 
-.bottom .intro {
-    grid-area: intro;
+button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 25px;
+    border-radius: 20px;
+    height: fit-content;
+    color: white;
+    background-color: #4598dc;
+    appearance: none;
+    border: none;
 }
 
-.bottom .name {
-    grid-area: name;
+button:hover {
+    cursor: pointer;
+    outline: #2A4DD0 solid;
 }
 
 main {
