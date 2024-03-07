@@ -169,6 +169,10 @@ main {
     grid-area: main;
     display: grid;
     grid-template-columns: 5fr 2fr;
+    background-color: #e0e6ef;
+    padding: 20px 20px 40px 15px;
+    /* check left and bottom paddings */
+
 }
 
 .title {
@@ -182,7 +186,43 @@ main .projects {
     grid-template-rows: 1fr 13fr;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(301px, 1fr)); 
+    /*  */
+    grid-auto-rows: 1fr;
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    border: 1px lightgrey solid;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 25px 1fr 25px;
+    height: 250px;
+    background: linear-gradient(to right, #BC3A7D 2.5%, #FFFFFF 1%);
+    padding: 35px;
+    min-width: 301px;
+}
+
+.project-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.project {
+    color: #696969;
+}
+
+.project-actions {
+    margin-top: auto;
+    margin-left: auto;
+}
+
 main .notices {
     display: grid;
     grid-template-rows: 1fr 6fr 1fr 6fr;
 }
+
+/* Add shadows */
