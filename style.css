@@ -52,29 +52,29 @@ nav {
     grid-template-areas: "pg" "settings";
  }
 
- .branding {
+.branding {
     display: flex;
     align-items: center;
     font-size: 2rem;
     font-weight: 450;
     font-family:'Rubik','Times New Roman', Times, serif;
- }
+}
 
- .branding img {
+.branding img {
     width: 70px;
     height: auto;
- }
+}
 
- .sidebar,
-    nav {
+.sidebar,
+nav {
         gap: 45px;
         font-size: 1.5rem;
         font-weight: 400;
-    }
+}
 
- .page-nav {
+.page-nav {
     grid-area: pg;
- }
+}
 
 .settings-nav {
  grid-area: settings;
@@ -123,7 +123,7 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 }
 
 .profile-pic {
-    height: 58px;
+    height: 60px;
     width: auto;
 }
 
@@ -168,7 +168,7 @@ button:hover {
 main {
     grid-area: main;
     display: grid;
-    grid-template-columns: 5fr minmax(260px, 300px);
+    grid-template-columns: 1fr minmax(297px, 340px);
     background-color: #e0e6ef;
     padding: 25px 25px 40px 15px;
     /* check left and bottom paddings */
@@ -178,7 +178,7 @@ main {
 }
 
 .title {
-    font-size: 1.28rem;
+    font-size: 1.4rem;
     font-weight: 500;
     font-family: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-bottom: 10px;
@@ -186,12 +186,12 @@ main {
 
 main .projects {
     display: grid;
-    grid-template-rows: 1fr 13fr;
+    grid-template-rows: min-content 1fr;
 }
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(401px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(307px, 1fr)); 
     /* check once add announcements about increasing min and min-width */
     grid-auto-rows: 1fr;
     gap: 25px;
@@ -222,18 +222,18 @@ main .projects {
 
 main .notices {
     display: grid;
-    grid-template-rows: 7fr 7fr;
+    grid-template-rows: min-content;
 }
 
 
 .announcements .body {
-    padding: 20px 30px;
+    padding: 30px 40px;
     /* check how this interacts with trending */
-    max-height: 350px;
+    margin-bottom: 45px;
 }
 
 .announcement {
-    height: 100px;
+    height: 110px;
     padding: 15px 0;
 }
 
@@ -247,19 +247,22 @@ main .notices {
 
 .announcement .heading {
     font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.announcement .content {
+    font-size: 0.9rem;
 }
 
 .announcement .content, .trending .current-project {
-    font-size: 0.875rem;
     color: grey;
     font-weight: 4000;
 }
 
 .trending .body {
-    padding: 20px 20px 30px 20px;
-    max-height: 320px;
+    padding: 30px 25px;
     display: grid;
-    gap: 15px;
+    gap: 22px;
 }
 
 .trending .body > div {
