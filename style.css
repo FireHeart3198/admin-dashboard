@@ -28,10 +28,9 @@ li {
 /* Make sure everything doesn't break at high zooms */
 
 .container {
-    height: 100vh;
-    width: 100vw;
     display: grid;
-    grid-template: 1fr 5fr / 1fr 4fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns:  minmax(310px, 1fr) 4fr;
     grid-template-areas: "sidebar header"
                 "sidebar main";
 }
@@ -39,17 +38,22 @@ li {
 .sidebar {
     grid-area: sidebar;
     display: grid;
-    grid-template-rows: 1fr 12fr;
+    grid-template-rows: max-content;
     grid-template-areas: "branding" "nav";
     background-color: #3abc79;
     color: white;
+    padding: 20px 20px 0 20px;
+    gap: 35px;
 }
 
 nav {
     grid-area: nav;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 360px;
     grid-template-areas: "pg" "settings";
+    gap: 45px;
+    font-size: 1.5rem;
+    font-weight: 500;
  }
 
 .branding {
@@ -65,15 +69,30 @@ nav {
     height: auto;
 }
 
-.sidebar,
-nav {
-        gap: 45px;
-        font-size: 1.5rem;
-        font-weight: 400;
+.branding div {
+    margin-left: 13px;
 }
 
 .page-nav {
     grid-area: pg;
+}
+
+.page-nav ul,
+.settings-nav ul {
+    display: grid;
+    grid-template-rows: repeat(6, 58px);
+}
+
+.page-nav li,
+.settings-nav li {
+    display: grid;
+    grid-template-columns: 85px 1fr;
+    align-items: center;
+}
+
+.page-nav li > img,
+.settings-nav li > img {
+    justify-self: center;
 }
 
 .settings-nav {
