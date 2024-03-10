@@ -109,7 +109,7 @@ header {
     display: grid;
     grid-template-rows: 2fr 3fr;
     align-items: center;
-    margin: 10px 40px;
+    padding: 10px 40px;
     gap: 10px;
 }
 
