@@ -95,6 +95,11 @@ nav {
     justify-self: center;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
 .settings-nav {
  grid-area: settings;
 }
@@ -170,13 +175,14 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 
 header .bottom {
     display: grid;
-    grid-template-columns: 115px minmax(280px, 1fr) 420px 40px;
+    grid-template-columns: 115px minmax(284px, 1fr) 420px;
     align-items: center;
 }
 
 .bottom .profile {
     display: flex;
     flex-direction: column;
+    padding-right: 30px;
 }
 
 .bottom .profile-pic {
@@ -220,8 +226,7 @@ main {
     display: grid;
     grid-template-columns: 1fr minmax(297px, 340px);
     background-color: #e0e6ef;
-    padding: 25px 25px 40px 15px;
-    /* check left and bottom paddings */
+    padding: 25px 25px 40px 15px;    
     gap: 20px;
 
 
@@ -242,33 +247,35 @@ main .projects {
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(307px, 1fr)); 
-    /* check once add announcements about increasing min and min-width */
-    grid-auto-rows: 1fr;
     gap: 25px;
 }
 
 .card {
     display: grid;
     grid-template-rows: 25px 1fr 25px;
-    height: 250px;
+    height: 255px;
     background: linear-gradient(to right, #BC3A7D 2.5%, #FFFFFF 1%);
     padding: 35px;
-    min-width: 301px;
+    gap: 5px;
 }
 
 .project-name {
-    font-size: 1.12rem;
+    font-size: 1.32rem;
     font-weight: 500;
 }
 
+
 .project {
     color: #696969;
+    font-size: 1.15rem;
 }
 
 .project-actions {
-    margin-top: auto;
-    margin-left: auto;
+    justify-self: end;
+    display: flex;
+    gap: 29px;
 }
+
 
 main .notices {
     display: grid;
@@ -278,7 +285,6 @@ main .notices {
 
 .announcements .body {
     padding: 30px 40px;
-    /* check how this interacts with trending */
     margin-bottom: 45px;
 }
 
@@ -330,10 +336,9 @@ main .notices {
     align-self: end;
 }
 
-.announcements .body, .card, .trending .body {
+.announcements .body,
+.card, .trending .body {
     background-color: white;
     border: 1px lightgrey solid;
     border-radius: 8px;
 }
-
-/* Add shadows */
